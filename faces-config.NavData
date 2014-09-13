@@ -2,15 +2,15 @@
 <Scene Scope="Project" version="2">
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
-        <Node id="Agent/customer/Edit.xhtml" x="150" y="600" zoom="true"/>
         <Node id="Agent/customer/List.xhtml" x="-23" y="151" zoom="false"/>
+        <Node id="Agent/customer/Edit.xhtml" x="150" y="600" zoom="true"/>
         <Node id="index.xhtml" x="359" y="12" zoom="false"/>
         <Node id="Agent/agent/List.xhtml" x="345" y="149" zoom="true"/>
         <Node id="Agent/customer/View.xhtml" x="400" y="300" zoom="true"/>
         <Node id="template.xhtml" x="66" y="31" zoom="true"/>
         <Node id="Agent/customer/Create.xhtml" x="755" y="137" zoom="false"/>
-        <Node id="Agent/agent/View.xhtml" x="117" y="422" zoom="true"/>
         <Node id="Agent/agent/Edit.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="Agent/agent/View.xhtml" x="117" y="422" zoom="true"/>
         <Node id="Agent/agent/Create.xhtml" x="417" y="498" zoom="false"/>
     </Scope>
     <Scope Scope="All Faces Configurations"/>
