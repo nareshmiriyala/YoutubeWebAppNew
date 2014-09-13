@@ -31,12 +31,17 @@
 package com.dellnaresh.view;
 
 import com.dellnaresh.model.Wuser;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.annotation.Resource;
+import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
@@ -53,7 +58,9 @@ import javax.transaction.UserTransaction;
  * and the persistence layer.</p>
  * @author rlubke
  */
-public class UserManager {
+@ManagedBean(name = "usermanager")
+@RequestScoped
+public class UserManager implements Serializable{
     
     /**
      * <p>The key for the session scoped attribute holding the

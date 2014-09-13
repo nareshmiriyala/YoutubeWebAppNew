@@ -1,0 +1,36 @@
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:body>
+
+    <h1>Login</h1>
+    
+    <f:view>
+        <h:messages style="color: red"
+                    showDetail="true"/>
+        <h:form id="login">
+            <h:panelGrid columns="2" border="0">
+                Username: <h:inputText id="username" 
+                                       value="#{usermanager.username}"/>        
+                Password: <h:inputSecret id="password"
+                                         value="#{usermanager.password}"/>
+            </h:panelGrid>
+            <h:commandButton id="submit" 
+                             type="submit"
+                             value="Login"
+                             action="#{usermanager.validateUser()}"/>
+          
+            <h:commandLink id="create"
+                           value="Create New Account"
+                           action="create"/>
+        </h:form>
+       
+    </f:view>
+    
+    </h:body>
+</html>

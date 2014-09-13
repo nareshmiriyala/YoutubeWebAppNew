@@ -14,25 +14,25 @@
             com.dellnaresh.view.AuthenticationPhaseListener
         </phase-listener>
     </lifecycle>
-    <managed-bean>
+<!--    <managed-bean>
         <managed-bean-name>usermanager</managed-bean-name>
         <managed-bean-class>com.dellnaresh.view.UserManager</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>      
-    </managed-bean>
+    </managed-bean>-->
     
     <navigation-rule>
         <navigation-case>
             <from-outcome>login</from-outcome>
-            <to-view-id>/login.jsp</to-view-id>
+            <to-view-id>/login.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
         <navigation-case>
             <from-outcome>create</from-outcome>
-            <to-view-id>/create.jsp</to-view-id>            
+            <to-view-id>/create.xhtml</to-view-id>            
         </navigation-case>
         <navigation-case>
             <from-outcome>app-main</from-outcome>
-            <to-view-id>/welcomeJSF.jsp</to-view-id>
+            <to-view-id>/welcomeJSF.xhtml</to-view-id>
             <redirect/>
         </navigation-case>
     </navigation-rule>
