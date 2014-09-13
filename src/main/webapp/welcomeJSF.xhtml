@@ -10,9 +10,9 @@
     <h:body>
         <f:view>
             <h1><h:outputText value="JSF + JPA" /></h1>
-            Welcome #{user.firstname} #{user.lastname}!  You've been registered since ${user.since}.
+            Welcome #{user.firstname} #{user.lastname}!  You've been registered since #{user.since}.
             <h:form>
-                <h:commandButton id="logout" value="Logout" action="${usermanager.logout()}"/>
+                <h:commandButton id="logout" value="Logout" action="#{usermanager.logout()}"/>
             </h:form>
         </f:view>
     </h:body>
