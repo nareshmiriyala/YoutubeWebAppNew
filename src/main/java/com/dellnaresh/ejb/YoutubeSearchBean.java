@@ -10,7 +10,9 @@ import com.dellnaresh.model.Movies;
 import com.google.api.services.youtube.model.ResourceId;
 import com.google.api.services.youtube.model.SearchResult;
 import com.google.api.services.youtube.model.Thumbnail;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
@@ -27,10 +29,10 @@ public class YoutubeSearchBean {
     MoviesFacade moviesFacade;
    
 
-    public void getMovies(String movieName) {
+    public  Map<String,String> getMovies(String movieName) {
  com.youtube.indianmovies.data.Search search=new com.youtube.indianmovies.data.Search();
    List<SearchResult> searchResultList =search.getMoviesList(movieName);
-       
+       Map<String,String> moviesMap=new HashMap<>();
         for(SearchResult singleVideo:searchResultList){
             ResourceId rId = singleVideo.getId();
              Movies movies=new Movies();
@@ -47,8 +49,11 @@ public class YoutubeSearchBean {
                movies.setId(rId.getVideoId());
                 System.out.println("\n-------------------------------------------------------------\n");
                 moviesFacade.create(movies);
+                moviesMap.put(rId.getVideoId(), thumbnail.getUrl());
             }
         }
+        
+        return moviesMap;
     }
     
     

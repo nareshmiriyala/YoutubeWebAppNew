@@ -7,6 +7,9 @@
 package com.dellnaresh.view;
 
 import com.dellnaresh.ejb.YoutubeSearchBean;
+import com.google.api.services.youtube.model.SearchResult;
+import java.util.List;
+import java.util.Map;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
@@ -26,7 +29,15 @@ public class YoutubeSearch {
      @NotNull
      @Size(min=2,max=5600)
      String moviename;
+     Map<String,String> moviesMap;
 
+    public Map<String, String> getMoviesMap() {
+        return moviesMap;
+    }
+
+    public void setMoviesMap(Map<String, String> moviesMap) {
+        this.moviesMap = moviesMap;
+    }
     public String getMoviename() {
         return moviename;
     }
@@ -41,6 +52,6 @@ public class YoutubeSearch {
     }
     public void doSearch(){
         
-        youtubeSearch.getMovies(moviename);
+    moviesMap=  youtubeSearch.getMovies(moviename);
     }
 }
