@@ -48,6 +48,7 @@ public class YoutubeSearchBean {
                  movies.setUrl(thumbnail.getUrl());
                movies.setId(rId.getVideoId());
                 System.out.println("\n-------------------------------------------------------------\n");
+                moviesFacade.find(movies);
                 moviesFacade.create(movies);
                 moviesMap.put(rId.getVideoId(), thumbnail.getUrl());
             }

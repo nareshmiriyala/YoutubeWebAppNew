@@ -19,6 +19,8 @@
                     <h:panelGroup >
                         <c:forEach items="${youtubeSearch.moviesMap}" var="entry">
                             <li>Key: ${entry.key}, value: ${entry.value}</li>
+                            <iframe width="420" height="315"
+                           src="http://www.youtube.com/v/${entry.key}"/>
                         </c:forEach>
 
                     </h:panelGroup>

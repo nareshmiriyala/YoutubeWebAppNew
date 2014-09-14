@@ -30,7 +30,7 @@ public class Search {
      */
     private static final String PROPERTIES_FILENAME = "youtube.properties";
 
-    private static final long NUMBER_OF_VIDEOS_RETURNED = 25;
+    private static final long NUMBER_OF_VIDEOS_RETURNED = 1;
 
     /**
      * Define a global instance of a Youtube object, which will be used
@@ -82,6 +82,9 @@ public class Search {
             String apiKey = properties.getProperty("youtube.apikey");
             search.setKey(apiKey);
             search.setQ(queryTerm);
+            search.setVideoDuration("long");
+           search.setRegionCode("IN");
+          
 
             // Restrict the search results to only include videos. See:
             // https://developers.google.com/youtube/v3/docs/search/list#type
